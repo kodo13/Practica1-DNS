@@ -122,4 +122,13 @@ Para la parada del servicio, ejecutaremos `docker-compose down -v`. El -v es par
 Para la configuración de la zona, tenemos que crear un archivo db.nuestrodominio.ejemplo, db.ionut.int en este caso.
 Aquí configuraremos todos los registros, tales como ns, que es el dominio de nuestro servidor, un alias si queremos, un cliente de correo electrónico MX...etc.
 
-Para comprobar que funciona, una vez arrancado los servicios, tenemos que ir al cliente y abrir una terminal, de esta manera, podremos hacer un ping al servidor y ver si obtenemos respuesta.
+Para comprobar que funciona, una vez arrancado los servicios, tenemos que ir al cliente y abrir una terminal.
+![(Imagen)](https://github.com/kodo13/Practica1-DNS/blob/master/Capturas/Captura%20desde%202022-10-26%2000-05-19.png?raw=true)
+> Apertura de shell del cliente
+De esta manera, podremos hacer un ping al servidor y ver si obtenemos respuesta.
+![(Imagen)](https://github.com/kodo13/Practica1-DNS/blob/master/Capturas/Captura%20desde%202022-10-26%2000-03-11.png?raw=true)
+> Comprobación de ping a la Ip del servidor.
+
+también podemos hacer ping al dominio que tenemos y ver si nos resuelve con la IP.
+![(Imagen)](https://github.com/kodo13/Practica1-DNS/blob/master/Capturas/Captura%20desde%202022-10-26%2000-06-49.png?raw=true)
+> Vemos que haciendo ping al dominio, nos resuleve a la Ip fija del servidor.
