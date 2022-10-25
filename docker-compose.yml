@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  bind9:
+    container_name: p1_serverDNS #nombre del contenedor
+    image: internetsystemsconsortium/bind9:9.16 #Ojo, a la imagen hay que ponerle la versión
+    volumes:
+      - ./conf:/etc/bind
+      - ./zonas:/var/lib/bind
+    networks:
+      p1_subnet:
+        ipv4_address: 10.0.3.254 #Dirección IP fija de nuestro servidor DNS.
+  p1_cliente:
+    container_name: p1_cliente
+    image: alpine
+    networks: 
+      - p1_subnet
+    stdin_open: true      # Línea equivalente a docker run -i 
+    tty: true             # docker run -t , opciones para que se nos abra un nuevo ter
+    dns: 
+      - 10.0.3.254        #el contenedor dns server
+networks:
+ p1_subnet: 
+  external: true
+

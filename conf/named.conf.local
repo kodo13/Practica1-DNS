@@ -1,0 +1,8 @@
+zone "ionut.int" { 
+        type master;
+        file "/var/lib/bind/db.ionut.int";
+        notify explicit;
+        allow-query { 
+                any;
+        };
+};

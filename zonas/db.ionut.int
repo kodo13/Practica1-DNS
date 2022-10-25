@@ -1,0 +1,15 @@
+$TTL 38400	; 10 hours 40 minutes
+@		IN SOA	ns.ionut.int. root.email.com. (
+				1910202203   ; serial
+				10800      ; refresh (3 hours)
+				3600       ; retry (1 hour)
+				604800     ; expire (1 week)
+				38400      ; minimum (10 hours 40 minutes)
+				)
+@		IN NS	ns.ionut.int.
+ns		IN A 	10.0.3.254
+test	IN A	10.0.3.254
+alias	IN A    10.0.3.13
+alias2	IN TXT   mensaje
+ionu    IN CNAME 10.0.3.115
+
